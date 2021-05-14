@@ -1,10 +1,10 @@
 *{
-  box-sizing: border-box;
+  box-sizing:circle;
 }
 :root{
-  --primary:rgba(45,188,46,1);
-  --secondary:rgba(61,86,43,1);
-  --tertiary:rgba(45,59,46,1);
+  --primary:rgb(188, 109, 45);
+  --secondary:rgb(233, 235, 225);
+  --tertiary:rgb(233, 80, 93);
   --dark:rgba(29,28,31,1);
   --light:rgba(288,296,245,1);
 }
@@ -20,15 +20,12 @@ body{
 
 h1
 h2
-h3
-h4
-h5
-h6{
+h3{
   margin: 0;
 }
 
 header{
-  padding: ;
+  padding: 12px;;
   display:flex ;
   flex-direction:row ;
   justify-content:space-between ;
@@ -39,16 +36,20 @@ header{
 }
 
 header h1{
-  color: var(--tertiary);
-  background-color: var(--secondary);
+  color: black;
+  border-width:var(--corvid-border-radius,var(--brw,0));
+  border-radius:var(--corvid-border-radius,var(--rd.50%));
   padding: 5px,1%,5px,6%;
   font-size: 4vw;
-  margin:0 ;
   line-height: 1.8;
 
 }
-
-nav ul li{
+h2 {
+  text-align:left;
+  font-size:24px;
+  font-style:italic
+}
+nav ul li {
   display: inline;
   flex-direction: row;
   flex-wrap: wrap;
@@ -60,19 +61,18 @@ nav ul li {
   padding: 7px 12px;
   color: var(--secondary);
   margin-right: 10px;
-  background-image: linear-gradient(270deg, var(--secondary) 25%, var(--secondary) 100%);
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: bottom;
-  transition: all 0.25s ease-in;
+  transition: var(--trans1, border .4s ease 0s, background-color 10 ease 0s);
   font-size: 1.4rem;
+  border-style: solid;
 
 }
 
 nav ul li a:hover {
-  background-size: 100% 100%;
-  color: yellowgreen;
-}
+  color: var(--corvid-background-color,rgba(var(--bg,var(--color_17),var(--alpha-bg,1))));
+  }
 
 
 nav ul li a:last-child {
@@ -84,35 +84,6 @@ main {
   margin-bottom: 45px;
 }
 
-.hero-banner  {
-  background: rgb(68, 88, 120);
-  background-image: url("../images/02-hero-bg.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: soft-light;
-  min-height: 30vh;
-  color: var(--light);
-  padding: 2% 6%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  text-align: right;
-
-}
-
-.hero-banner div {
-  flex: 0 0 90%;
-}
-
-.hero-banner h2 {
-  background-color: var(--secondary);
-  color: var(--tertiary);
-  margin: 0;
-  padding: 5px 10px;
-  font-size: 2.3rem;
-  line-height: 1.2;
-  display:inline ;
-}
 
 .page-cover {
   max-width: 88%;
@@ -136,7 +107,7 @@ main {
   padding-right: 15px;
   border-right: 4px solid var(--primary);
   font-size: 4vw;
-  line-height: 1.1;
+
 }
 
 .page-section > div {
@@ -168,7 +139,7 @@ main {
   background-blend-mode: soft-light;
   background-size: 150%;
   transition: all 0.5s;
-  font-size: 0.9rem;
+  font-size: 0.9rem;  
   
 }
 
@@ -185,10 +156,6 @@ main {
 .flex-item div {
   background-color: var(--secondary);
   padding: 8px 10px;
-}
-
-.flex-item h3 {
-  font-size: 1.6rem;
 }
 
 .contact address {
@@ -219,24 +186,16 @@ main {
   color: var(--secondary);
 }
 
-.run-buddy {
-  background-image: url("../images/02-run-buddy.jpg");
+.software-piracy {
+background-image: url("../images/software-piracy.jpg");
 }
 
-.led-wall {
-  background-image: url("../images/02-portfolio-1.jpg");
+.operating-system {
+  background-image: url("../images/operating system.jpg");
 }
 
-.react-calc {
-  background-image: url("../images/02-portfolio-2.jpg");
-}
-
-.pastel-puzzles {
-  background-image: url("../images/02-portfolio-3.jpg");
-}
-
-.surf-report {
-  background-image: url("../images/02-portfolio-4.jpg");
+  .application-software {
+  background-image: url("../images/application-software.jpg");
 }
 
 @media screen and (max-width: 980px) {
@@ -257,10 +216,6 @@ main {
     justify-content: center;
   }
 
-  .page-section > h2,
-  .page-section > div {
-    flex: 0 0 100%;
-  }
 
   .page-section > h2 {
     border-right: none;
@@ -289,5 +244,5 @@ main {
 
   .contact address {
     flex-direction: column;
-    align-items: flex-start;
-}
+    align-items: flex-end;
+  }
