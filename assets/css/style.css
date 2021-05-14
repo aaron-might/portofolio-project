@@ -241,8 +241,7 @@ background-image: url("../images/software-piracy.jpg");
     justify-content: center;
     text-align: center;
   }
-
   .contact address {
-    flex-direction: column;
-    align-items: flex-end;
+    flex-wrap: nowrap;
+    align-content: flex;
   }
