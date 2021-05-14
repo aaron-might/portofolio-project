@@ -21,4 +21,4 @@ THEN I am presented with a responsive layout that adapts to my viewport
 ```
 ###
 
-description (link to live site)
+link to https://github.com/aaron-might/portofolio-project
